@@ -1,0 +1,14 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<a [routerLink]="['/home']">主页</a> <br>
+<!-- <a [routerLink]="['/stock']" [queryParams]="{id:1}">详情</a> -->
+<a [routerLink]="['/stock', 1]" >详情2</a>
+<br>
+<input type="button" value="Stock detail" (click)="toStockDetail()" />
+
+<br>
+<a [routerLink]="[{outlets:{aux:'consult'}}]">开始咨询</a>
+<br>
+<a [routerLink]="[{outlets:{aux:null}}]">结束咨询</a>
+
+<router-outlet></router-outlet>
+<router-outlet name="aux"></router-outlet>
