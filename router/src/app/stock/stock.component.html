@@ -1,0 +1,12 @@
+<div class="stock">
+  <p>
+    stock works! 
+  </p>
+  <p> stock id is: {{stockId}}</p>
+  <hr>
+  <input type="button" (click)="focus=true" value="关注"/>
+  <a [routerLink]="['./']">buyer list</a>
+  <br>
+  <a [routerLink]="['./seller', 100]">seller list</a>
+  <router-outlet></router-outlet>
+</div>
