@@ -8,13 +8,16 @@ import { ActivatedRoute, Params } from '@angular/router';
 })
 export class StockComponent implements OnInit {
 
-  private stockId:number;
+  private stock:Stock;
   private isPro:boolean;
   private focus:boolean = false;
   constructor(private routeInfo:ActivatedRoute) { }
 
   ngOnInit() {
-    this.routeInfo.params.subscribe((params: Params) => this.stockId = params["id"]);
+    this.routeInfo.data.subscribe((data: {stock:Stock})=>{
+      this.stock = data.stock;
+    });
+    this.routeInfo.params.subscribe((params: Params) => this.stock.id = params["id"]);
     // this.stockId = this.routeInfo.snapshot.queryParams["id"];
     // this.stockId = this.routeInfo.snapshot.params["id"];
 
@@ -22,5 +25,11 @@ export class StockComponent implements OnInit {
   }
   isFocus() {
     return this.focus;
+  }
+}
+
+export class Stock {
+  constructor(public id:number, public name:string) {
+
   }
 }

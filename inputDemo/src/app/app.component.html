@@ -1,0 +1,11 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<p> 我是父组件</p>
+<input type="text" placeholder="please input keyword" [(ngModel)]="search" >
+<br>
+<p>我是父组件， 价格来自于output: {{currentPrice}}</p>
+<hr>
+<!-- 子组件向父组件发射searchResult, 在这个地方接收 -->
+<!-- <app-stock [keyWord]="search" (searchResult)="searchResultHandler($event)"></app-stock> -->
+
+<app-stock [keyWord]="search" (addCard)="addCardHandler($event)"></app-stock>
+<app-stock-cart [stockInfo]="stockInfo"></app-stock-cart>
