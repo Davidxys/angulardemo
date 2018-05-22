@@ -14,7 +14,7 @@ import { Observable } from "rxjs";
     var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
     let valid = myreg.test(value);
     console.log("mobileValidator 是否校验通过： "+valid);
-    return Observable.of(valid?null : {mobile:true}).delay(500);
+    // return Observable.of(valid?null : {mobile:true}).delay(500);
   }
   export function paswordValidator(info: FormGroup):any{
     let password:FormControl = info.get('password') as FormControl;
