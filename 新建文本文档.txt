@@ -30,3 +30,12 @@ div {
 
 µã»÷
 <div id="box"></div>
+
+
+node 6.9.2  npm  3.10.9
+mock :json-server    npm install -g json-server
+
+
+
+
+
