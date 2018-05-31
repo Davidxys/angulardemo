@@ -1,0 +1,18 @@
+.drag-start{
+    opacity: 0.5;
+    border:red dashed 2px;
+}
+.box{
+    background-color: antiquewhite;
+    width: 100px; 
+    height: 100px
+}
+
+.box2{
+    background-color: aquamarine;
+    width: 200px;
+    height: 200px;
+}
+.drag-enter{
+    border: 1px dashed red;
+}

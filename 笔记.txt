@@ -1,0 +1,148 @@
+﻿1. 常用的三个管道：
+	1. {{birthday | date: 'yyyy-MM-dd HH:mm:ss'}}
+	2.{{pi | number: '2.1-4'}}
+	3. {{pie | async}} //可以在页面上处理异步流
+	4. 自定义管道 ng g pipe pipe/multiple  管道的声明和组件是一样的，都是在declarations里
+2. 
+输入属性@input() 从父组件接收数据
+输出属性@output() 
+
+3. angular 中有两种处理表单的方式
+   1. 模板式表单(imports: FormsModule)
+	模板式表单指令都是ng开头： ngForm, ngModel, ngModelGroup
+   2. 响应式编程方式(imports: ReactiveFormsModule)
+	响应式表单指令5个: (响应式表单是不可以通过模板变量引用)
+	[formGroup]
+	[formControl]
+	formGroupName=""
+	formControlName=""
+	formArrayName=""
+   
+   angualr/forms模块中特定的类： FormControl, FormControl, FormArray
+4. angular 校验器有两种
+	1. 自定义 xxx(param:AbstractControl):{[key:string]:any} {
+		return null;
+		}
+	2. 预定义
+		Validators.Required/.minLength/.pattern
+5. 状态字段5个
+	1.touched 判断用户是否获取过焦点
+	2.untouched
+	3.pristine 判断输入值改没改变过
+	4.dirty
+	5.pending
+6. 1)创建一个文件夹server: 
+   2)cd server:  npm init -y 初始化，建立一个包含默认配置的json文件
+   3) npm i @types/node --save  引入type script
+   4)ctrl + shift + b 构建
+   5)node server.js
+   
+   安装 npm install express --save
+   引入express定义文件 npm install @types/express --save
+   安装 npm install -g typescript   查看版本： tsc --version 手动编译： tsc hello.ts
+   启动： node build/stock_server.js
+	
+	安装文件实时监控: npm install -g nodemon
+	用nodemon 启动: nodemon build/stock_server.js
+7. 安装： npm install -g json-server
+   启动： json-server /json文件路径/db.json
+8. typescript 学习：
+    1. 多行字符串用双撇号· 包含：   
+		var aa = `222
+				333
+				4444`;
+	2. 字符串模板： 
+		console.log(`hello ${myname}`);
+		console.log(`hello ${getName}`);
+		console.log(`<div>
+		<span>${$myname}</span>
+		<span>${$getName}</span>
+		<div>xxx</div>
+		</div>`);
+	3. 自动拆分字符串
+		function test(template, name, age) {
+			console.log(template);
+			console.log(name);
+			console.log(age);
+		}
+		var myname = "zhangsan";
+		var getAge = function() {
+			return 18;
+		}
+		test `hello my name is ${myname}, I'm ${getAge()}`;
+		解释：hello my name is 是test的第一个参数template
+			, I'm  是test的第二个参数
+	4. 参数类型：
+		var myname:string = "zhangsan";
+		var age:number = 13;
+		var man:boolean = true;
+		function test(name:string):void{}
+	5. 可选参数
+		function test(a:string, b?:string, c:string="default"){}
+	6. 函数新特性：
+		1. ...表示任意数量的参数
+		function func1(...args) {
+		}
+		2. generator 函数
+		3. 析构表达式
+			function getStock() {
+				return {
+					code: "ibm",
+					price: 100
+				}
+			}
+			var {code, price} = getStock();
+			针对数组的析构表达式：
+			var array1 = [1,2,3,4];
+			var [num1, num2] = array1; //显示1，2
+			var [,num2,,num4] = array1;
+			var [num1,num2, ...others] = array1;
+			方法参数是析构表达式：
+			function do([num1,num2, ...others]){
+			
+			}
+			do(array1);
+		4. 箭头表达式：来声明匿名函数，消除匿名函数this指针问题
+			1. 单行不需要写{} 和return： 
+			   两参数： var sum = (a1,a2) => a1 + a2;
+			   无参数： var sum = () => "";
+			   一个参数： var sum = arg1 => {};
+				eg: var myArray = [1,2,3,4,5];
+					myArray.filter(value => value%2 ==0);
+			-----------------------------------------------
+			function getStock(name:string)
+		5. forEach()  for in    for of
+		6.泛型： 用来指定数组只能放某一类型的元素
+		7.类型定义文件(*.d.ts)
+8. 企业协作平台
+node 6.9.2  npm  3.10.9
+mock :json-server    npm install -g json-server
+
+9. 创建一个新项目:ng new demo -si/ --skip install  
+	安装依赖： npm install/ cnpm install
+	
+10. 弹性布局：http://caniuse.com
+	display: -webkit-box; 旧版兼容性好
+	display:flex； //新版
+	容器属性：
+	0. flex-direction
+	1.flex-wrap
+	2.flex-flow
+	3.justify-content
+11. 安装rxjs-compat: npm install rxjs-compat@6.0.0-tactical-rc.1
+	
+
+
+		
+		
+			
+
+	
+	
+	
+	
+	
+	
+	
+	
+	

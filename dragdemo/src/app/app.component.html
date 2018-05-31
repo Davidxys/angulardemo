@@ -1,0 +1,10 @@
+<div class="box" 
+[app-draggable]="true" 
+[dragTag]="'task-item'"
+[dragData]="item"
+[draggedClass]="'drag-start'" >app</div>
+
+<div class="box2" 
+app-droppable
+[dragEnterClass]="'drag-enter'"
+(dropped)="handleMove($event)"></div>
