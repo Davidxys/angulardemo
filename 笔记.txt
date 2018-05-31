@@ -44,7 +44,8 @@
 	
 	安装文件实时监控: npm install -g nodemon
 	用nodemon 启动: nodemon build/stock_server.js
-	
+7. 安装： npm install -g json-server
+   启动： json-server /json文件路径/db.json
 8. typescript 学习：
     1. 多行字符串用双撇号· 包含：   
 		var aa = `222
@@ -123,7 +124,13 @@ mock :json-server    npm install -g json-server
 10. 弹性布局：http://caniuse.com
 	display: -webkit-box; 旧版兼容性好
 	display:flex； //新版
-
+	容器属性：
+	0. flex-direction
+	1.flex-wrap
+	2.flex-flow
+	3.justify-content
+11. 安装rxjs-compat: npm install rxjs-compat@6.0.0-tactical-rc.1
+	
 
 
 		

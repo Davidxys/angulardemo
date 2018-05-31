@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  handleMove(srcData, list) {
+    switch (srcData.tag) {
+      case 'task-item':
+        console.log("handling item");
+        break;
+      case 'task-list':
+        console.log('task-list');
+        break;
+    }
+  }
 }
