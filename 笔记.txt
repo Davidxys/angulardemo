@@ -118,9 +118,23 @@
 node 6.9.2  npm  3.10.9
 mock :json-server    npm install -g json-server
 
-9. 创建一个新项目:ng new demo -si/ --skip install  
-	安装依赖： npm install/ cnpm install
-	
+9.  安装cnpm: npm i -g cnpm
+	创建一个新项目:
+		ng new taskmgr -si --style=scss
+		ng new taskmgr --skip install
+	创建一个核心模块：
+		ng g m core
+		ng g m shared
+	安装依赖： npm install 或者 cnpm install
+	angular安装指定版本:
+		npm install -g @angular/cli@1.1.0
+		cnpm install -g @angular/cli@1.1.0
+	安装node-sass:	cnpm install node-sass@latest
+	安装material： cnpm i --save @angular/material
+	安装cdk: cnpm install @angular/cdk
+	安装animations : npm install --save @angular/animations
+	安装时间类库： npm install --save date-fns   安装类型定义文件： npm i --save-dev @types/date-fns
+	生成内联式模板： ng g c shared/confim-dialog --inline-template -is -spec=false
 10. 弹性布局：http://caniuse.com
 	display: -webkit-box; 旧版兼容性好
 	display:flex； //新版
@@ -130,7 +144,19 @@ mock :json-server    npm install -g json-server
 	2.flex-flow
 	3.justify-content
 11. 安装rxjs-compat: npm install rxjs-compat@6.0.0-tactical-rc.1
-	
+12. 1.卸载之前的版本
+		npm uninstall -g @angular/cli
+	2.清除缓存，确保卸载干净
+		npm cache clean
+	3.检查是否卸载干净
+		输入命令:ng -v
+		若显示command not found则卸载干净
+	4.安装指定版本
+		npm install -g @angular/cli@1.1.0
+	5.检查版本号
+		ng -v
+13. 图标字体库： https://material.io/tools/icons/?style=baseline
+		
 
 
 		

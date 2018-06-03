@@ -13,11 +13,13 @@ export class StockComponent implements OnInit {
   source:Observable<any>;
   stocks = [];
   constructor(public http: Http) {
-    this.source = this.http.get('/api/stock/').map(response=>response.json());
+    this.source = this.http.get('http://localhost:3000/stock/').map(response=>response.json());
   }
 
   ngOnInit() {
     this.source.subscribe(data=> this.stocks = data);
   }
-
+  openPopup(){
+    
+  }
 }
