@@ -156,7 +156,7 @@ mock :json-server    npm install -g json-server
 	5.检查版本号
 		ng -v
 13. 图标字体库： https://material.io/tools/icons/?style=baseline
-		
+14. https://github.com/1inus/angular2-layer
 
 
 		
