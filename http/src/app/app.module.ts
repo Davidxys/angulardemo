@@ -4,12 +4,17 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { StockComponent } from './stock/stock.component';
 import { HttpModule } from '@angular/http';
+import { DialogComponent } from './dialog/dialog.component';
+import { NgLayerComponent } from 'angular2-layer';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StockComponent
+    StockComponent,
+    DialogComponent,
+    NgLayerComponent
   ],
+  entryComponents:[NgLayerComponent, DialogComponent],
   imports: [
     BrowserModule,
     HttpModule

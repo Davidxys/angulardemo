@@ -1,5 +1,7 @@
 <ul>
   <li *ngFor="let item of stocks">
-    {{item}}
+    {{item.name}}
   </li>
 </ul>
+
+<button (click)="openPopup()">打开对话框</button>
