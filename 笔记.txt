@@ -135,6 +135,7 @@ mock :json-server    npm install -g json-server
 	安装animations : npm install --save @angular/animations
 	安装时间类库： npm install --save date-fns   安装类型定义文件： npm i --save-dev @types/date-fns
 	生成内联式模板： ng g c shared/confim-dialog --inline-template -is -spec=false
+	导入动画： npm i --save @angular/animations
 10. 弹性布局：http://caniuse.com
 	display: -webkit-box; 旧版兼容性好
 	display:flex； //新版
@@ -156,7 +157,7 @@ mock :json-server    npm install -g json-server
 	5.检查版本号
 		ng -v
 13. 图标字体库： https://material.io/tools/icons/?style=baseline
-		
+14. https://github.com/1inus/angular2-layer
 
 
 		
