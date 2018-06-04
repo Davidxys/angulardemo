@@ -7,6 +7,8 @@ import { HttpModule } from '@angular/http';
 import { DialogComponent } from './dialog/dialog.component';
 import { NgLayerComponent } from 'angular2-layer';
 
+import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,3 +25,4 @@ import { NgLayerComponent } from 'angular2-layer';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+platformBrowserDynamic().bootstrapModule(AppModule);

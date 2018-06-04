@@ -6,16 +6,19 @@ import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from '../shared/shared.module';
+import { AppRoutingModule } from '../app-routing.module';
 import { MatIconRegistry } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';
 import { loadSvgResourcs } from '../utils/svg.util';
-import 'hammerjs';
+
+// import 'hammerjs';
 @NgModule({
   imports: [
     HttpModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    SharedModule
+    SharedModule,
+    AppRoutingModule
   ],
   declarations: [
     HeaderComponent,
@@ -25,7 +28,9 @@ import 'hammerjs';
   exports: [
     HeaderComponent,
     FooterComponent,
-    SidebarComponent]
+    SidebarComponent,
+    AppRoutingModule
+  ]
 })
 export class CoreModule {
   constructor(

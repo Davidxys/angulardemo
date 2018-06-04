@@ -158,7 +158,15 @@ mock :json-server    npm install -g json-server
 		ng -v
 13. 图标字体库： https://material.io/tools/icons/?style=baseline
 14. https://github.com/1inus/angular2-layer
-
+15. 两种Angular弹出模态框的方式: http://www.php.cn/js-tutorial-384464.html
+	bootstrap 写的弹层api： https://valor-software.com/ngx-bootstrap/#/modals
+	bootstrap 写的弹层：https://github.com/valor-software/ngx-bootstrap
+	
+16. 后台管理系统： https://github.com/myopenresources/cc
+17. Angular4实现个人作品展示站： https://github.com/giscafer/project
+18: https://github.com/angular-ui
+	https://github.com/zhongzhong0505/CodeBe
+19: 动画：19
 
 		
 		
