@@ -158,7 +158,19 @@ mock :json-server    npm install -g json-server
 		ng -v
 13. 图标字体库： https://material.io/tools/icons/?style=baseline
 14. https://github.com/1inus/angular2-layer
-
+15. 两种Angular弹出模态框的方式: http://www.php.cn/js-tutorial-384464.html
+	bootstrap 写的弹层api： https://valor-software.com/ngx-bootstrap/#/modals
+	bootstrap 写的弹层：https://github.com/valor-software/ngx-bootstrap
+	
+16. 后台管理系统： https://github.com/myopenresources/cc
+17. Angular4实现个人作品展示站： https://github.com/giscafer/project
+18: https://github.com/angular-ui
+	https://github.com/zhongzhong0505/CodeBe
+19: 动画：19
+20. @angular/material: 官方 Material 组件库，官网站点： https://material.angular.io/ 
+	PrimeNG: 一套较丰富的 UI 组件库，有80多种组件，官网站点： https://www.primefaces.org/primeng/ 
+	Covalent: 基于官方 Material 组件库扩展的一套更丰富的 UI 库。 官网站点： https://teradata.github.io/covalent/#/components 
+	ngx-bootstrap：一套基于 Bootstrap 风格的 Angular 组件库。官网地址：http://valor-software.com/ngx-bootstrap/#/ 
 
 		
 		
