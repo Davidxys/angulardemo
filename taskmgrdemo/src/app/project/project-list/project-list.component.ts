@@ -1,4 +1,4 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
+import { Component, OnInit, HostBinding, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { NewProjectComponent } from '../new-project/new-project.component'
 import { MatDialog, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
 import { InviteComponent } from '../invite/invite.component';
@@ -9,7 +9,8 @@ import { slideToRight } from '../../anims/router.anim';
   selector: 'app-project-list',
   templateUrl: './project-list.component.html',
   styleUrls: ['./project-list.component.scss'],
-  animations: [slideToRight]
+  animations: [slideToRight],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class ProjectListComponent implements OnInit {
@@ -27,7 +28,7 @@ export class ProjectListComponent implements OnInit {
       "coverImg": "assets/img/covers/1.jpg",
     }
   ];
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog, private cd:ChangeDetectorRef) { }
 
   ngOnInit() {
   }
@@ -35,7 +36,14 @@ export class ProjectListComponent implements OnInit {
     const dialogRef = this.dialog.open(NewProjectComponent, {
       data:{title: '新增项目：'}
     });
-    dialogRef.afterClosed().subscribe(result => console.log(result));
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(result);
+      this.projects = [ ...this.projects,
+        {name:'一个新项目', desc: "一个新项目", coverImg:'assets/img/covers/8.png'},
+        {name:'又一个新项目', desc: "又一个新项目", coverImg:'assets/img/covers/8.png'},
+      ];
+      this.cd.markForCheck();
+    });
   }
   launchInviteDialog() {
     this.dialog.open(InviteComponent, {
@@ -47,10 +55,14 @@ export class ProjectListComponent implements OnInit {
       data: {title: '编辑项目：'}
     });
   }
-  launchConfirmDialog(){
+  launchConfirmDialog(project){
     const dialogRef = this.dialog.open(ConfirmDialogComponent, {
       data:{title: '删除项目：', content: '您确认删除该项目吗？'}
     });
-    dialogRef.afterClosed().subscribe(result => console.log(result));
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(result);
+      this.projects = this.projects.filter(p => p.name===project.id);
+      this.cd.markForCheck();
+    });
   }
 }
